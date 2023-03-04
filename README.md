@@ -1,4 +1,4 @@
-Source Code for SpeechBot
+#Source Code for SpeechBot
 This is a Python script for a Discord bot that uses the Disnake library, which is a fork of the popular Discord.py library. The bot can perform various tasks such as searching for songs, searching on Wikipedia, browsing dictionaries, and chatting with users using GPT-3.
 
 The script starts by importing the necessary libraries:
@@ -16,20 +16,20 @@ The aiohttp library is used for making HTTP requests, Disnake for creating the b
 The client object is then created using the commands.Bot class from Disnake, with the command prefix set to "nil!" and case_insensitive set to True. The client object is then configured to remove the default help command using the remove_command() method.
 
 python
-Copy code
+
 client = commands.Bot(command_prefix='nil!', case_insensitive=True)
 client.remove_command('help')
 The bot's token is obtained from an environment variable and stored in the client_token variable.
 
 python
-Copy code
+
 client_token = os.environ['BOT_TOKEN']
 The script defines two classes, Help and Talk, each containing methods for the bot's various commands.
 
 The Help class contains a single method that responds to the /help command. It creates an Embed object using Disnake and adds fields for each available command, along with their descriptions. The Embed object is then sent as a message using the send_message() method.
 
 python
-Copy code
+
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -47,7 +47,7 @@ class Help(commands.Cog):
 The Talk class contains two methods that handle the /chat and /wiki-search commands, respectively. Both methods have a cooldown decorator that limits how often a user can use the command.
 
 python
-Copy code
+
 class Talk(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

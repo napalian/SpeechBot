@@ -46,9 +46,6 @@ class Talk:
                 embed.set_footer(text=f"{ctx.author.display_name}", icon_url=ctx.author.avatar.url)
                 await ctx.send(embed=embed)
 
-
-
-
     @question.error
     async def question_error(ctx, error):
         if isinstance(error, commands.CommandOnCooldown):

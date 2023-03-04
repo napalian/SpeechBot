@@ -15,10 +15,10 @@ The aiohttp library is used for making HTTP requests, Disnake for creating the b
 
 The client object is then created using the commands.Bot class from Disnake, with the command prefix set to "nil!" and case_insensitive set to True. The client object is then configured to remove the default help command using the remove_command() method.
 
-python
+##python##
+#client = commands.Bot(command_prefix='nil!', case_insensitive=True)
+#client.remove_command('help')
 
-client = commands.Bot(command_prefix='nil!', case_insensitive=True)
-client.remove_command('help')
 The bot's token is obtained from an environment variable and stored in the client_token variable.
 
 python
@@ -31,6 +31,7 @@ The Help class contains a single method that responds to the /help command. It c
 python
 
 class Help(commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
     
@@ -49,6 +50,7 @@ The Talk class contains two methods that handle the /chat and /wiki-search comma
 python
 
 class Talk(commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
 

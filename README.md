@@ -73,6 +73,3 @@ class Talk(commands.Cog):
                 description='An error occurred while handling your request'
             )
             await ctx.send(embed=error_embed)
-
-    @commands.cooldown(1, 10, commands.BucketType.user)
-    @commands.command

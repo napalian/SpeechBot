@@ -35,7 +35,7 @@ class Talk:
         await ctx.response.defer()
         async with aiohttp.ClientSession() as session:
             api_url = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
-            headers = {"Authorization": "Bearer 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"}
+            headers = {"Authorization": "Bearer lol"}
             payload = {"inputs": message}
 
 

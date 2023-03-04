@@ -5,7 +5,6 @@ This is a Python script for a Discord bot that uses the Disnake library, which i
 The script starts by importing the necessary libraries:
 
 python
-Copy code
 import aiohttp
 from disnake.ext import commands
 import asyncio

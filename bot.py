@@ -138,10 +138,7 @@ class Talk:
 
     @client.slash_command(name="set-api-key",description="Set your api-key to use OpenAI commands!")
     async def set_key(ctx,api_key:str):
-        with open("user_lock/{}".format(ctx.author.name), "w+") as key:
-            key.write(api_key)
-            user = await client.fetch_user(ctx.author.id)
-            await user.send("Thank you for setting your API-KEY!, you make re-use this command to change your api-key otherwise you are free to use openai commands!")
+        # Deleted this so idiots dont get any fishy ideas.
 
     @client.slash_command(name="image-of", description="Generate an image of a celebrity! OPEN-AI")
     async def celebrity(ctx: disnake.ApplicationCommandInteraction, *, name: str):
